@@ -7,7 +7,7 @@
 </head>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css' integrity='sha512-thoh2veB35ojlAhyYZC0eaztTAUhxLvSZlWrNtlV01njqs/UdY3421Jg7lX0Gq9SRdGVQeL8xeBp9x1IPyL1wQ==' crossorigin='anonymous'/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 <body >
     <div class="container-fluid">
 
@@ -16,7 +16,7 @@
             <div class="container-fluid">
 
             <div class="nav-brand my-2 my-sm-0 col-12 col-sm d-flex align-items-center justify-content-center">
-                <img style="width:50px;" src="img/logo.png" alt="Logo">
+                <img style="width:50px;" src="../img/logo.png" alt="Logo">
                 <h2>
                     <span class="logo-text-0 m-0 fw-bold">Waggles</span><span class="logo-text-1 m-0">Bot</span>
                 </h2>
@@ -38,74 +38,75 @@
             </div>
         </nav>
 
-        <div class="container-fluid container-md d-flex flex-column flex-sm-row ">
+        <div class="container-fluid container-md d-flex flex-column flex-sm-row mb-4">
             <div class="navbar m-4 align-items-start">
                 <ul class="navbar-nav d-flex flex-row flex-wrap flex-wrap flex-sm-column justify-content-between fw-bold">
                     <li class="nav-item">
-                        <a class="logo-text-0 nav-link p-2 fw-bolder fst-italic" href="/">Home</a>
+                        <a class="logo-text-0 nav-link p-2" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="logo-text-0 nav-link p-2" href="commands.html">Commands</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="logo-text-0 nav-link p-2" href="commands/derpi.html">Derpi</a>
+                        <a class="logo-text-0 nav-link p-2" href="derpi.html">Derpi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="logo-text-0 nav-link p-2" href="commands/next.html">Next</a>
+                        <a class="logo-text-0 nav-link p-2" href="next.html">Next</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="logo-text-0 nav-link p-2" href="commands/derpist.html">Derpist</a>
+                        <a class="logo-text-0 nav-link p-2" href="derpist.html">Derpist</a>
                     </li>
                     <li class="nav-item">
-                        <a class="logo-text-0 nav-link p-2" href="commands/derpitags.html">Derpitags</a>
+                        <a class="logo-text-0 nav-link p-2" href="derpitags.html">Derpitags</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="logo-text-0 nav-link p-2" href="commands/artist.html">Artist</a>
+                        <a class="logo-text-0 nav-link p-2" href="artist.html">Artist</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="logo-text-0 nav-link p-2" href="commands/reverse.html">Reverse</a>
+                        <a class="logo-text-0 nav-link p-2 fw-bolder fst-italic" href="reverse.html">Reverse</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="logo-text-0 nav-link p-2" href="commands/whitelist.html">Whitelist</a>
+                        <a class="logo-text-0 nav-link p-2" href="whitelist.html">Whitelist</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="logo-text-0 nav-link p-2" href="commands/alias.html">Alias</a>
+                        <a class="logo-text-0 nav-link p-2" href="alias.html">Alias</a>
                     </li>
                 </ul>
             </div>
 
             <!-- content starts here -->
             <div class="m-4 d-flex flex-column">
-                <h2>What is a Waggles?</h2>
-                <p>WagglesBot is a bot for making DerpiBooru searches!</p>
+                <h2>Reverse  Command</h2>
 
-                <p>She can process and post search results right in the chat, with a simple
-                    <span class="bg-highlight fw-bold p-1">~d pinkie pie</span> In addition she knows when DerpiBooru links are posted and can retrieve info such as the artist as well as all relevant tags. Her primary use lies in her ability to remember channel specific links and images, reducing the complexity of running commands. Chains can be created, a simple derpi search can be followed up with a <span class="bg-highlight fw-bold p-1">~tags</span> or <span class="bg-highlight fw-bold p-1">~artist</span> with no arguments. Waggles will use the last image posted in that channel as your argument!
+                <p>This command returns the Derpibooru link, if possible, for a provided non-derpibooru link.<br>
+                    If the image is not found on Derpibooru, she will say as such. Images with primarily white backgrounds have a higher chance of failing.
+                </p>
+                <p>Images are filtered based on channel, see <a href="/whitelist">whitelist</a> for more information.</p>
+
+                <h3>Aliases</h3>
+
+                <p class="ms-4 mt-0">
+                    <span class="bg-highlight fw-bold p-1">~r</span>
                 </p>
 
-                <p>
-                    She has various commands that allow for deep interaction with derpibooru, such as:
+                <h3>Usage:</h3>
+
+                <p class="ms-4 mt-0">
+                    <span class="bg-highlight fw-bold p-1">~reverse</span><br>
+                    <span class="bg-highlight fw-bold p-1">~reverse &lt;link&gt;</span>
                 </p>
 
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        ~Derpi
-                    </li>
-                    <li class="list-group-item">
-                        ~Next
-                    </li>
-                    <li class="list-group-item"> 
-                        ~Derpitags
-                    </li>
-                    <li class="list-group-item">
-                        ~Artist
-                    </li>
-                    <li class="list-group-item">
-                        ~Count
-                    </li>
-                </ul>
+                <h3>Description:</h3>
 
-                <img style="max-width:490px" class="my-4" src="img/dpinkie.png" alt="">
+                <p class="ms-4 mt-0">
+                    Returns derpibooru link for provided link. This is about the same as doing a reverse search on the Derpibooru website.
+                </p>
+
+                <h3>Link:</h3>
+
+                <p class="ms-4 mt-0">
+                    When a link is not provided, she will try to use the last link posted in this channel. Any additional text in the same message containing the link will hinder this ability, though.
+                </p>
 
             </div>
 

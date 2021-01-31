@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waggles</title>
+</head>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css' integrity='sha512-thoh2veB35ojlAhyYZC0eaztTAUhxLvSZlWrNtlV01njqs/UdY3421Jg7lX0Gq9SRdGVQeL8xeBp9x1IPyL1wQ==' crossorigin='anonymous'/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link rel="stylesheet" href="../style.css">
+<body >
+    <div class="container-fluid">
+
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg p-3 row justify-content-between bg-navbar">
+            <div class="container-fluid">
+
+            <div class="nav-brand my-2 my-sm-0 col-12 col-sm d-flex align-items-center justify-content-center">
+                <img style="width:50px;" src="../img/logo.png" alt="Logo">
+                <h2>
+                    <span class="logo-text-0 m-0 fw-bold">Waggles</span><span class="logo-text-1 m-0">Bot</span>
+                </h2>
+            </div>
+
+            
+            <ul class="nav col d-flex justify-content-center">
+                <li class="nav-item p-2 ">
+                    Add to server!
+                </li>
+                <li class="nav-item p-2">
+                    Github
+                </li>
+                <li class="nav-item p-2">
+                    <i class="fab fa-twitter"></i>
+                </li>
+            </ul>
+
+            </div>
+        </nav>
+
+        <div class="container-fluid container-md d-flex flex-column flex-sm-row mb-4">
+            <div class="navbar m-4 align-items-start">
+                <ul class="navbar-nav d-flex flex-row flex-wrap flex-wrap flex-sm-column justify-content-between fw-bold">
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="commands.html">Commands</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2 fw-bolder fst-italic" href="derpi.html">Derpi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="next.html">Next</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="derpist.html">Derpist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="derpitags.html">Derpitags</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="artist.html">Artist</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="reverse.html">Reverse</a>
+                    </li> 
+                    <li class="nav-item"></li>
+                        <a class="logo-text-0 nav-link p-2" href="whitelist.html">Whitelist</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="alias.html">Alias</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- content starts here -->
+            <div class="m-4 d-flex flex-column">
+                <h2>Derp Command</h2>
+
+                <p>This command searches derpibooru for any images which have the matching tag, posting 1 out of the top 50 results randomly. <br>
+                    Tags in search are separated by "," or "AND". <br>
+                    Browsing through the results is as easy as running <span class="bg-highlight fw-bold p-1">~n</span>, which returns the next
+                </p>
+                <p>image in the set, if available.
+                    Images are filtered based on channel, see <a href="/whitelist">whitelist</a> for more information.</p>
+                
+                <h3>Aliases</h3>
+
+                <p class="ms-4 mt-0">
+                    <span class="bg-highlight fw-bold p-1">~d</span>
+                </p>
+
+                <h3>Usage:</h3>
+
+                <p class="ms-4 mt-0">
+                    <span class="bg-highlight fw-bold p-1">~derpi &lt;query&gt;</span><br>
+                    <span class="bg-highlight fw-bold p-1">~derpi &lt;sortInt&gt;  &lt;tag&gt;</span>
+                </p>
+
+                <h3>Description:</h3>
+
+                <p class="ms-4 mt-0">
+                    Allows you to run a derpi query with given terms, results are sorted by score. I.E searching for Pinkie Pie, would yield 50 of the highest scoring images, Waggles choosing one to post.
+                </p>
+
+                <h3>Complex Queries:</h3>
+
+                <p class="ms-4 mt-0">
+                    Derpibooru allows for very complicated queries, the one mentioned above is the basic one. You can also do <span class="bg-highlight fw-bold p-1">~derpi id:imageidHere</span> or <span class="bg-highlight fw-bold p-1">~derpi faved_by:username</span> in tandem with the basic tags.
+                </p>
+
+                <h3>SortInt</h3>
+
+                <p class="ms-4 mt-0">
+                   Allows you to run a derpi query with given terms, results are sorted by the integer entered at beginning. <br>
+                   <strong>Sort By:</strong>
+
+                    <ol class="ms-4 mt-0">
+                        <li>Created at</li>
+                        <li>Wilson Score</li>
+                        <li>Relevance</li>
+                        <li>Random</li>
+                        <li>Score</li>
+                    </ol>
+                </p>
+
+            </div>
+
+            
+
+        </div>
+
+
+    </div>
+</body>
+</html>
