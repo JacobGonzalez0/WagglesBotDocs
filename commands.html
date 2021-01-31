@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waggles</title>
+</head>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css' integrity='sha512-thoh2veB35ojlAhyYZC0eaztTAUhxLvSZlWrNtlV01njqs/UdY3421Jg7lX0Gq9SRdGVQeL8xeBp9x1IPyL1wQ==' crossorigin='anonymous'/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link rel="stylesheet" href="style.css">
+<body >
+    <div class="container-fluid">
+
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg p-3 row justify-content-between bg-navbar">
+            <div class="container-fluid">
+
+            <div class="nav-brand my-2 my-sm-0 col-12 col-sm d-flex align-items-center justify-content-center">
+                <img style="width:50px;" src="img/logo.png" alt="Logo">
+                <h2>
+                    <span class="logo-text-0 m-0 fw-bold">Waggles</span><span class="logo-text-1 m-0">Bot</span>
+                </h2>
+            </div>
+
+            
+            <ul class="nav col d-flex justify-content-center">
+                <li class="nav-item p-2 ">
+                    Add to server!
+                </li>
+                <li class="nav-item p-2">
+                    Github
+                </li>
+                <li class="nav-item p-2">
+                    <i class="fab fa-twitter"></i>
+                </li>
+            </ul>
+
+            </div>
+        </nav>
+
+        <div class="container-fluid container-md d-flex flex-column flex-sm-row mb-4">
+            <div class="navbar m-4 align-items-start">
+                <ul class="navbar-nav d-flex flex-row flex-wrap flex-wrap flex-sm-column justify-content-between fw-bold">
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2 fw-bolder fst-italic" href="/commands.html">Commands</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/commands/derpi.html">Derpi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/commands/next.html">Next</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/commands/derpist.html">Derpist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/commands/derpitags.html">Derpitags</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/commands/artist.html">Artist</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/commands/reverse.html">Reverse</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/commands/whitelist.html">Whitelist</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/commands/alias.html">Alias</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- content starts here -->
+            <div class="m-4 d-flex flex-column">
+                <h2>Derpibooru commands</h2>
+
+                <p>The majority of Waggles functionality pertains to Derpibooru related tasks. Most commands can in some way reference the results of the last image posted in the channel.</p>
+
+                <p>Waggles has link detection that allows her to find information on the last image posted in that channel, whether she posted it, or a user did.</p>
+
+                <p><strong>Note:</strong> All derpibooru commands are subject to a whitelist set up manually, which is channel specific, see <a href="/commands/whitelist.html">whitelist</a>  for more information.</p>
+
+
+                <p class="mb-0"><span class="bg-highlight fw-bold p-1">~derpi &lt;tag&gt; </span> or <span class="bg-highlight fw-bold p-1">~derpi &lt;sortInt&gt; &lt;tag&gt;</span></p>
+
+                <p class="ms-4 mt-0">
+                    Allows you to run a derpi query with given terms, results are sorted by score, a single image is posted into chat, along with artist info. Adding a sorting Int to the beginning of your command modifies the results.
+                </p>
+
+                <p class="mb-0"><span class="bg-highlight fw-bold p-1">~next </span> or <span class="bg-highlight fw-bold p-1">~n</span></p>
+
+                <p class="ms-4 mt-0">
+                    Returns the next image in cache, from last ~derpi search in that channel. Adding an Int as an argument references that index in the cache.
+                </p>
+
+                <p class="mb-0"><span class="bg-highlight fw-bold p-1">~derpist &lt;tag&gt;</span> or <span class="bg-highlight fw-bold p-1">~count;</span></p>
+
+                <p class="ms-4 mt-0">
+                    Returns the amount of images on Derpibooru that match those tags.
+                </p>
+
+                <p class="mb-0"><span class="bg-highlight fw-bold p-1">~derpitags &lt;link&gt;</span> or <span class="bg-highlight fw-bold p-1">~tags;</span></p>
+
+                <p class="ms-4 my-0">
+                    Returns the tags of the given Derpibooru image. Subject to whitelist content filter. 
+                </p>
+                <p class="ms-4 mt-0">
+                    Omitting a link returns the tags of the last Derpibooru image posted in that channel by either Waggles or a user. Subject to whitelist content filter.
+                </p>
+
+                <p class="mb-0"><span class="bg-highlight fw-bold p-1">~artist  &lt;link&gt;</span> or <span class="bg-highlight fw-bold p-1">~a;</span></p>
+
+                <p class="ms-4 mt-0">
+                    Returns derpibooru links to artist(s) page as well as Derpibooru/ID link of provided link. 
+                </p>
+                <p class="ms-4 mt-0">
+                    If link is ommited, Waggles will use the last derpibooru link posted in the channel.
+                </p>
+
+                <p class="mb-0"><span class="bg-highlight fw-bold p-1">~reverse &lt;tag&gt;</span> or <span class="bg-highlight fw-bold p-1">~r;</span></p>
+
+                <p class="ms-4 my-0">
+                    Searches database for given image, returns Derpibooru page if possible. If result is NSFW, it will only be posted in whitelisted channels.
+                </p>
+
+                <h2 class="mt-4">Whitelist commands</h2>
+
+                <p>The whitelist is a very important part of Waggles functionality, due to the way she filters content. Explicit results will only be returned in channels that exist within this whitelist.</p>
+
+                <p class="mb-0"><span class="bg-highlight fw-bold p-1">~wlist &lt;Add/remove&gt; &lt;#channel&gt;</span></p>
+
+                <p class="ms-4 my-0">
+                    Adds or removes a channel from the whitelist, requires the Manage Channels Discord permission.
+                </p>
+
+                <h2 class="mt-4">Miscellaneous commands</h2>
+                
+                <p class="mb-0"><span class="bg-highlight fw-bold p-1">~alias &lt;Add/remove&gt; &lt;commandName&gt; &lt;command&gt; &lt;InnerArgs&gt;</span></p>
+
+                <p class="ms-4 my-0">
+                    Adds, removes, or edits a command alias to memory.
+                </p>
+                <p class="ms-4 my-0">
+                    Ex.<span class="bg-highlight fw-bold p-1"> add dailyFluttershy derpi fluttershy AND safe</span> This allows one to run <span class="bg-highlight fw-bold p-1">~dailyFluttershy</span> and have the rest of the command executed automatically.
+                </p>
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+
+    </div>
+</body>
+</html>
