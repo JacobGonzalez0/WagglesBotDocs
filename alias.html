@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waggles</title>
+</head>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css' integrity='sha512-thoh2veB35ojlAhyYZC0eaztTAUhxLvSZlWrNtlV01njqs/UdY3421Jg7lX0Gq9SRdGVQeL8xeBp9x1IPyL1wQ==' crossorigin='anonymous'/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link rel="stylesheet" href="style.css">
+<body >
+    <div class="container-fluid">
+
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg p-3 row justify-content-between bg-navbar">
+            <div class="container-fluid">
+
+            <div class="nav-brand my-2 my-sm-0 col-12 col-sm d-flex align-items-center justify-content-center">
+                <img style="width:50px;" src="img/logo.png" alt="Logo">
+                <h2>
+                    <span class="logo-text-0 m-0 fw-bold">Waggles</span><span class="logo-text-1 m-0">Bot</span>
+                </h2>
+            </div>
+
+            
+            <ul class="nav col d-flex justify-content-center">
+                <li class="nav-item p-2 ">
+                    Add to server!
+                </li>
+                <li class="nav-item p-2">
+                    Github
+                </li>
+                <li class="nav-item p-2">
+                    <i class="fab fa-twitter"></i>
+                </li>
+            </ul>
+
+            </div>
+        </nav>
+
+        <div class="container-fluid container-md d-flex flex-column flex-sm-row mb-4">
+            <div class="navbar m-4 align-items-start">
+                <ul class="navbar-nav d-flex flex-row flex-wrap flex-wrap flex-sm-column justify-content-between fw-bold">
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="commands.html">Commands</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="derpi.html">Derpi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="next.html">Next</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="derpist.html">Derpist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="derpitags.html">Derpitags</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="artist.html">Artist</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="reverse.html">Reverse</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2" href="whitelist.html">Whitelist</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="logo-text-0 nav-link p-2 fw-bolder fst-italic" href="alias.html">Alias</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- content starts here -->
+            <div class="m-4 d-flex flex-column">
+                <h2>Alias</h2>
+
+                <p>Aliases are a quick way to designate predefined commands, and package them into a quickly executed command. <br>
+                    For example, it replaces a long, wordy command with long arguments with a quick couple character command. <br>
+                    An aliased command is server specific, and will only work for the current guild. Importing alias records will be added soon.
+                </p>
+                
+                <h3>Commands</h3>
+
+                <p class="ms-4 mt-0">
+                    <span class="bg-highlight fw-bold p-1">~alias add</span><br>
+                    <span class="bg-highlight fw-bold p-1">~alias remove</span><br>
+                    <span class="bg-highlight fw-bold p-1">~alias edit</span><br>
+                    <span class="bg-highlight fw-bold p-1">~alias list</span>
+                </p>
+
+                <h3>Usage:</h3>
+
+                <p class="ms-4 mt-0">
+                    <span class="bg-highlight fw-bold p-1">~alias all</span><br>
+                    <span class="bg-highlight fw-bold p-1">~alias &lt;action&gt; &lt;aliasName&gt; &lt;command&gt; &lt;arguments&gt;</span>
+                </p>
+
+                <h3>Description:</h3>
+
+                <p class="ms-4 mt-0">
+                    This command will add/remove the provided command and args to the Alias record.
+                </p>
+
+                <h3>Action:</h3>
+
+                <p class="ms-4 mt-0">
+                    AUsable args for this part: add/remove/edit the alias into the record.
+                </p>
+
+                <h3>AliasName:</h3>
+
+                <p class="ms-4 mt-0">
+                    This is the word that you want to use as your command, for example choosing apple would allow you to run <span class="bg-highlight fw-bold p-1">~apple</span>.
+                </p>
+
+                <h3>Command:</h3>
+
+                <p class="ms-4 mt-0">
+                    This is the command you want to run when using the alias you've chosen.
+                </p>
+
+                <h3>Arguments:</h3>
+
+                <p class="ms-4 mt-0">
+                    Any applicable arguments for the aliased command, such as search terms or a link.
+                </p>
+            </div>
+
+            
+
+        </div>
+
+
+    </div>
+</body>
+</html>
